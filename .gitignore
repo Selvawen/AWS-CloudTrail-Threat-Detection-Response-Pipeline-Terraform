@@ -1,0 +1,5 @@
+# Terraform local state and caches
+.terraform/
+*.tfstate
+*.tfstate.backup
+infra/lambda.zip
