@@ -1,6 +1,6 @@
 # CloudTrail Threat Detection & Automated Logging Lab
 
-<img width="500" height="auto" alt="terraform aws" src="https://github.com/user-attachments/assets/90dae85b-8df9-42b3-a3a2-6894c083c14a" />
+<img width="500" height="auto" alt="terraform aws" src="https://github.com/user-attachments/assets/7b62cfab-2efc-4df6-a916-0f8c6de3f294" />
 
 
 This project documents the design and implementation of a cloud-native detection pipeline in AWS. The goal was to simulate sensitive API activity, detect it in near real-time, and store structured alert data for analysis.
@@ -74,12 +74,12 @@ CloudTrail immediately began writing log files to the S3 bucket.
 
 Terraform-created CloudTrail S3 bucket:
 
-<img width="800" height="318" alt="1-Terraform‑created CloudTrail S3 bucket in us‑east‑1" src="https://github.com/user-attachments/assets/a48ac1f5-54d0-441a-919c-61b6d80129bf" />
+<img width="800" height="318" alt="1-Terraform‑created CloudTrail S3 bucket in us‑east‑1" src="https://github.com/user-attachments/assets/87a4a365-16da-4dfd-8a2b-50ae1fbe3849" />
 
 
 CloudTrail log files actively being written:
 
-<img width="800" height="905" alt="2-CloudTrail log files being written into the S3 bucket" src="https://github.com/user-attachments/assets/c1c36e9b-a47e-4444-bade-d6d8052051ee" />
+<img width="800" height="905" alt="2-CloudTrail log files being written into the S3 bucket" src="https://github.com/user-attachments/assets/4a107f4b-0620-4964-858a-1de577fadbf7" />
 
 
 At this stage, the infrastructure was passively collecting all account activity — including IAM and KMS operations.
@@ -103,7 +103,7 @@ These actions commonly indicate:
 
 ### EventBridge Rules
 
-<img width="800" height="633" alt="eventbridge rules" src="https://github.com/user-attachments/assets/14f4eb02-1e8b-4433-bebf-a530dfe40689" />
+<img width="800" height="633" alt="eventbridge rules" src="https://github.com/user-attachments/assets/c118cfa5-02ff-4562-8030-1ea98bf8b3b6" />
 
 
 Instead of manually reviewing logs, the system now automatically reacts to specific high-risk activity.
@@ -141,19 +141,22 @@ The Lambda function:
 
 Lambda code:
 
-<img width="800" height="538" alt="lambda code source" src="https://github.com/user-attachments/assets/3476258b-ecb2-443d-a3b8-aac22df53953" />
+<img width="800" height="538" alt="lambda code source" src="https://github.com/user-attachments/assets/1eba0e6c-1f3f-4399-8a95-40366f99dff9" />
+
 
 
 
 Environment variables:
 
-<img width="800" height="181" alt="lambda environment variables" src="https://github.com/user-attachments/assets/ba49da19-a995-4f00-8100-207e9f4e2958" />
+<img width="800" height="181" alt="lambda environment variables" src="https://github.com/user-attachments/assets/2ddd62e7-b459-49ae-a223-4fd4f832c4db" />
+
 
 
 
 Runtime configuration:
 
-<img width="800" height="260" alt="lambda runtime settings" src="https://github.com/user-attachments/assets/b7c423c9-9054-4232-bcd3-69b25d7742b3" />
+<img width="800" height="260" alt="lambda runtime settings" src="https://github.com/user-attachments/assets/f4c30f13-7173-4825-97e1-33643c9d5b31" />
+
 
 
 This demonstrates serverless development and runtime configuration management within AWS.
@@ -170,12 +173,13 @@ CloudWatch logs confirmed that:
 
 Lambda execution logs:
 
-<img width="800" height="787" alt="Cloudwatch-LambdaInvoked" src="https://github.com/user-attachments/assets/9afe655e-0a5a-4cdd-8aac-aff91f62c03b" />
+<img width="800" height="787" alt="Cloudwatch-LambdaInvoked" src="https://github.com/user-attachments/assets/e6997255-1a32-4e94-ab54-56de562ee374" />
 
 
 Log stream details:
 
-<img width="800" height="199" alt="Cloudwatch-LogStream" src="https://github.com/user-attachments/assets/7f19d890-7178-433d-ba55-e6678214cf8f" />
+<img width="800" height="199" alt="Cloudwatch-LogStream" src="https://github.com/user-attachments/assets/5ec16dd9-9d9c-47ce-927a-952d24499ba0" />
+
 
 
 This validated that the detection pipeline was functioning end-to-end.
@@ -197,12 +201,14 @@ The table includes:
 
 DynamoDB alert records:
 
-<img width="800" height="184" alt="dynamoDB tables alerts" src="https://github.com/user-attachments/assets/74c3e7c5-5cf5-42c0-a91c-60bb5b8c97a0" />
+<img width="800" height="184" alt="dynamoDB tables alerts" src="https://github.com/user-attachments/assets/2d81568e-b231-4813-958f-934f8bf716a5" />
+
 
 
 Expanded table view:
 
-<img width="800" height="631" alt="dynamoDB" src="https://github.com/user-attachments/assets/6a69717a-28da-4b67-acc4-6ee328034a24" />
+<img width="800" height="631" alt="dynamoDB" src="https://github.com/user-attachments/assets/44b2e125-5397-47ad-a234-62150e9c6b29" />
+
 
 
 This enables:
