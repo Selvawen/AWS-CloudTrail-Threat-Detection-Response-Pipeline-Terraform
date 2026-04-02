@@ -79,7 +79,7 @@ Terraform-created CloudTrail S3 bucket:
 
 CloudTrail log files actively being written:
 
-<img width="800" height="905" alt="2-CloudTrail log files being written into the S3 bucket" src="https://github.com/user-attachments/assets/4a107f4b-0620-4964-858a-1de577fadbf7" />
+<img width="800" height="905" alt="2-CloudTrail log files being written into the S3 bucket" src="https://github.com/user-attachments/assets/492ac948-b103-403c-973d-2f40471f1cc4" />
 
 
 At this stage, the infrastructure was passively collecting all account activity — including IAM and KMS operations.
